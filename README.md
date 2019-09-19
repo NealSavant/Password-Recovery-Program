@@ -9,7 +9,9 @@ As such, the .vscode folder uses .json files to automatically launch arguments 0
 These arguments are necessary to open the password file and insert the salted pw hash value.
 
 This program will also run on its own using the command line as long as pwFile.txt and PasswordRecovery.java are in the same folder. The commands to run this program are as follows:
+
 : javac PasswordRecovery.java
+
 : java PasswordRecovery pwFile.txt 9560204
 
 Thanks for reading,
