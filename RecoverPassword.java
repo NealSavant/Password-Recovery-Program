@@ -71,8 +71,16 @@ public class RecoverPassword {
 		}
 		//get values for characters from ASCII long array
 		for(int x=0; x<numLines; x++) {
-			System.out.print("\n"+"| "+  (x+1) + ".   |   ");
-			
+
+			//these 3 if statements fix the spacing to account for decimal increasing in the output, ie: 1, 10, 100
+			if(x+1 <= 9)
+				System.out.print("\n"+"| "+  (x+1) + ".    |   ");
+			else if(x+1 >= 10 & x+1 <= 99)
+				System.out.print("\n"+"| "+  (x+1) + ".   |   ");
+			else if(x+1 >= 100)	
+				System.out.print("\n"+"| "+  (x+1) + ".  |   ");
+
+
 			for(int z=0; z<6; z++) {
 				charPWList[x][z] = (char)inputPWList[x][z];
 				System.out.print(charPWList[x][z]);
