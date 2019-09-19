@@ -18,3 +18,7 @@ This program will also run on its own using the command line as long as pwFile.t
 Thanks for reading,
 
 Neal 
+
+
+
+![Output Example](https://user-images.githubusercontent.com/55298338/65219861-834fdc80-da87-11e9-889c-87c8b9075214.JPG)
