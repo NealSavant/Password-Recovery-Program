@@ -20,7 +20,7 @@ public class RecoverPassword {
 		char[][] charPWList= new char[999][11];
 		int numLines=0;			//number of rows in file
 		System.out.println("-------------------------------------------------");
-		System.out.println("CIS3360 Password Recovery by Neal Savant");
+		System.out.println("Password Recovery by Neal Savant");
 		System.out.println("");
 		System.out.println("Dictionary file name        : "+ args[0]);
 		System.out.println("Salted password hash value  : "+ args[1]);
@@ -29,11 +29,6 @@ public class RecoverPassword {
 		
 		//file read method
 		try {
-			
-			System.out.println("File opened.");
-			System.out.println("------------------------------------------------");
-			System.out.println("| Index  |  Word  |  Unsalted ASCII equivalent |");
-			System.out.print("------------------------------------------------");
 			
 			//counts number of lines(passwords) in the file
 			FileReader input = new FileReader(pwFile);
@@ -49,7 +44,12 @@ public class RecoverPassword {
 			
 			//scan file and allocate ASCII values to inputPWList Array
 			Scanner fileChars = new Scanner(pwFile);
-			
+
+			System.out.println("File opened.");
+			System.out.println("------------------------------------------------");
+			System.out.println("| Index  |  Word  |  Unsalted ASCII equivalent |");
+			System.out.print("------------------------------------------------");
+
 			while(fileChars.hasNextLine()) {
 			for(int x=0; x<numLines; x++) {
 				for(int z=0; z<6; z++) {

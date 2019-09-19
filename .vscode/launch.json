@@ -1,0 +1,18 @@
+{
+    "configurations": [
+
+        {
+            "type": "java",
+            "name": "Debug (Launch) with Arguments Prompt",
+            "request": "launch",
+            "mainClass": "",
+            "args": "pwFile.txt 9560204",
+        },
+        {
+            "type": "java",
+            "name": "RecoverPassword",
+            "request": "launch",
+            "mainClass": "RecoverPassword"
+        }
+    ]
+}
