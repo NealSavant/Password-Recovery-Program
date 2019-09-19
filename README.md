@@ -24,4 +24,4 @@ Neal
 
 
 
-![Output Example](https://user-images.githubusercontent.com/55298338/65219861-834fdc80-da87-11e9-889c-87c8b9075214.JPG)
+![example output](https://user-images.githubusercontent.com/55298338/65223453-3a9c2180-da8f-11e9-9a20-d145f36729f3.JPG)
