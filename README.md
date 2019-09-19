@@ -1,8 +1,11 @@
 # Password-Recovery-Program
-program that will attempt to recover a salted and hashed password using a file of candidate passwords
+Program that will attempt to recover a salted and hashed password using a file of candidate passwords.
 
 Hello,
 
+
+
+If you want to run the code:
 
 This program has been set up using visual studio code. 
 As such, the .vscode folder uses .json files to automatically launch arguments 0 and 1. arg[0] == pwFile.txt , arg[1] = 9560204. 
