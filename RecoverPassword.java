@@ -70,7 +70,7 @@ public class RecoverPassword {
 			e.printStackTrace();
 		}
 		//get values for characters from ASCII long array
-		for(int x=0; x<numLines; x++) {
+		for(int x=0; x < numLines; x++) {
 
 			//these 3 if statements fix the spacing to account for decimal increasing in the output, ie: 1, 10, 100
 			if(x+1 <= 9)
@@ -81,13 +81,13 @@ public class RecoverPassword {
 				System.out.print("\n"+"| "+  (x+1) + ".  |   ");
 
 
-			for(int z=0; z<6; z++) {
+			for(int z = 0; z < 6; z++) {
 				charPWList[x][z] = (char)inputPWList[x][z];
 				System.out.print(charPWList[x][z]);
 			}
 			//space between char output and int output
 			System.out.print("  |   ");
-			for(int y=0; y<6; y++) {
+			for(int y = 0; y < 6; y++) {
 				System.out.print(inputPWList[x][y]);
 			}
 			System.out.print(" |");
@@ -117,6 +117,11 @@ public class RecoverPassword {
 			long tempHashValue = ( (243 * Long.parseLong(left)) + (Long.parseLong(right))) % 85767489;
 			//System.out.println(tempHashValue);
 			
+			if(tempHashValue != inputHashValue) {
+				//increment salt combinations
+				saltCombinationsTested++;
+			}
+
 			if(tempHashValue == inputHashValue) {
 				System.out.println(" Password recovered:");
 				//prints original character array
@@ -133,12 +138,8 @@ public class RecoverPassword {
 				finish =true;
 				break;
 			}
-			
-			else if(tempHashValue != inputHashValue) {
-				//increment salt combinations
-				saltCombinationsTested++;
-			}
-			if(saltCombinationsTested == (1000*numLines)) {
+		
+			else if(saltCombinationsTested == (1000*numLines)) {
 				System.out.println("\nPassword not found in dictionary");
 				System.out.println("Combinations tested: " + saltCombinationsTested );
 			}
